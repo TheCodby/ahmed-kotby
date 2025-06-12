@@ -5,10 +5,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ahmed Kotby | Modern Portfolio</title>
+    <title>Ahmed Kotby Portfolio</title>
     <meta
       name="description"
-      content="Ahmed Kotby’s modern portfolio – Software Engineer & Full Stack Developer."
+      content="Ahmed Kotby's portfolio – Software Engineer & Full Stack Developer."
     />
     <!-- Open Graph -->
     <meta property="og:title" content="Ahmed Kotby | Modern Portfolio" />
@@ -16,196 +16,610 @@
       property="og:description"
       content="Software Engineer & Full Stack Developer."
     />
-    <meta property="og:image" content="images/og-image.jpg" />
+    <meta property="og:image" content="images/og-profile.jpg" />
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style" />
+    <link rel="preload" href="images/profile.jpg" as="image" />
+
+    <!-- DNS prefetch for external links -->
+    <link rel="dns-prefetch" href="//github.com" />
+    <link rel="dns-prefetch" href="//linkedin.com" />
+
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>"
+    />
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to content</a>
+
+    <!-- Enhanced Navbar -->
     <header class="navbar">
       <div class="container">
-        <a href="#" class="logo">Kotby.</a>
-        <nav>
+        <a href="#" class="logo">
+          <span class="logo-text">Kotby</span>
+          <span class="logo-dot">.</span>
+        </a>
+        <nav class="nav-menu" id="nav-menu">
           <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#hero" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
         </nav>
-        <!-- only English toggle now -->
-        <div class="lang-switch">
-          <button aria-label="English">EN</button>
-        </div>
+
+        <!-- Mobile menu toggle -->
+        <button
+          class="mobile-toggle"
+          id="mobile-toggle"
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
 
     <main id="main">
-      <!-- Hero -->
+      <!-- Enhanced Hero -->
       <section id="hero" class="hero">
         <div class="hero-inner">
           <picture class="profile-pic">
-            <img src="images/profile.jpg" alt="Ahmed Kotby" />
+            <img src="images/profile.jpg" alt="Ahmed Kotby" loading="eager" />
           </picture>
           <div class="hero-text">
-            <h1 class="fade-in">Ahmed Kotby</h1>
+            <h1 class="fade-in">
+              <span class="greeting">Hi, I'm</span>
+              <span class="name">Ahmed Kotby</span>
+            </h1>
             <h2 class="fade-in delay">
-              Software Engineer & Full-Stack Developer
+              <span class="role">Software Engineer</span>
+              <span class="separator">&</span>
+              <span class="role">Full-Stack Developer</span>
             </h2>
-            <p class="fade-in delay-long">
-              <a href="resume.pdf" class="btn" download
-                >Download Résumé (PDF)</a
-              >
+            <p class="hero-description fade-in delay-long">
+              Crafting exceptional digital experiences with modern technologies
+              and clean code
             </p>
+            <div class="hero-actions fade-in delay-longest">
+              <a href="resume.pdf" class="btn btn-primary" download>
+                <span>Download Resume</span>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7,10 12,15 17,10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+              </a>
+              <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
           </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+          <span>Scroll Down</span>
+          <div class="scroll-arrow"></div>
         </div>
       </section>
 
-      <!-- About -->
+      <!-- Enhanced About -->
       <section id="about" class="section fade-in-up">
-        <h2>About Me</h2>
-        <p>
-          Full Stack and Mobile Developer with 3+ years of experience building
-          high-performance web & mobile apps. Passionate about clean code, UX,
-          and modern architectures.
-        </p>
+        <div class="container">
+          <div class="section-header">
+            <h2>About Me</h2>
+            <p class="section-subtitle">Get to know me better</p>
+          </div>
+
+          <div class="about-content">
+            <div class="about-text">
+              <p class="lead">
+                Full Stack and Mobile Developer with
+                <strong>3+ years</strong> of experience building
+                high-performance web & mobile applications.
+              </p>
+              <p>
+                I'm passionate about creating clean, efficient code and
+                delivering exceptional user experiences. My expertise spans
+                modern web technologies, mobile development, and cloud
+                architectures.
+              </p>
+
+              <div class="skills-grid">
+                <div class="skill-category">
+                  <h4>Frontend</h4>
+                  <div class="skills">
+                    <span class="skill">React</span>
+                    <span class="skill">Next.js</span>
+                    <span class="skill">TypeScript</span>
+                    <span class="skill">Flutter</span>
+                  </div>
+                </div>
+                <div class="skill-category">
+                  <h4>Backend</h4>
+                  <div class="skills">
+                    <span class="skill">Node.js</span>
+                    <span class="skill">Laravel</span>
+                    <span class="skill">FastAPI</span>
+                    <span class="skill">PostgreSQL</span>
+                  </div>
+                </div>
+                <div class="skill-category">
+                  <h4>Tools</h4>
+                  <div class="skills">
+                    <span class="skill">Docker</span>
+                    <span class="skill">AWS</span>
+                    <span class="skill">Git</span>
+                    <span class="skill">Prisma</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <!-- Experience -->
+      <!-- Enhanced Experience -->
       <section id="experience" class="section fade-in-up delay">
-        <h2>Experience</h2>
-        <div class="timeline">
-          <div class="entry">
-            <img
-              src="images/hozma-logo.png"
-              alt="Hozma.tech logo"
-              class="company-logo"
-            />
-            <span class="date">Sept 2024 – Present</span>
-            <h3>
-              <a href="https://hozma.tech/">Software Engineer @ Hozma.tech</a>
-            </h3>
+        <div class="container">
+          <div class="section-header">
+            <h2>Experience</h2>
+            <p class="section-subtitle">My professional journey</p>
           </div>
-          <div class="entry">
-            <img
-              src="images/ejarly-logo.webp"
-              alt="Ejarly logo"
-              class="company-logo"
-            />
-            <span class="date">Jan 2024 – Sept 2024</span>
-            <h3>
-              <a href="https://ejarly.net/"
-                >Junior Software Engineer @ Ejarly</a
-              >
-            </h3>
-          </div>
-          <div class="entry">
-            <img
-              src="images/sindibad-logo.svg"
-              alt="Sindibad International logo"
-              class="company-logo"
-            />
-            <span class="date">Jan 2022 – May 2023</span>
-            <h3>
-              <a href="https://sindibadinternational.net"
-                >Full Stack Developer @ Sindibad International</a
-              >
-            </h3>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="company-info">
+                  <img
+                    src="images/hozma-logo.png"
+                    alt="Hozma.tech logo"
+                    class="company-logo"
+                    loading="lazy"
+                  />
+                  <div class="company-details">
+                    <h3>
+                      <a
+                        href="https://hozma.tech/"
+                        target="_blank"
+                        rel="noopener"
+                        >Software Engineer @ Hozma.tech</a
+                      >
+                    </h3>
+                    <span class="date">Sept 2024 – Present</span>
+                  </div>
+                </div>
+                <p class="role-description">
+                  Leading full-stack development projects and mentoring junior
+                  developers.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="company-info">
+                  <img
+                    src="images/ejarly-logo.webp"
+                    alt="Ejarly logo"
+                    class="company-logo"
+                    loading="lazy"
+                  />
+                  <div class="company-details">
+                    <h3>
+                      <a
+                        href="https://ejarly.net/"
+                        target="_blank"
+                        rel="noopener"
+                        >Junior Software Engineer @ Ejarly</a
+                      >
+                    </h3>
+                    <span class="date">Jan 2024 – Sept 2024</span>
+                  </div>
+                </div>
+                <p class="role-description">
+                  Developed mobile applications using Flutter and backend APIs
+                  with Laravel and FastAPI.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="company-info">
+                  <img
+                    src="images/sindibad-logo.svg"
+                    alt="Sindibad International logo"
+                    class="company-logo"
+                    loading="lazy"
+                  />
+                  <div class="company-details">
+                    <h3>
+                      <a
+                        href="https://sindibadinternational.net"
+                        target="_blank"
+                        rel="noopener"
+                        >Full Stack Developer @ Sindibad International</a
+                      >
+                    </h3>
+                    <span class="date">Jan 2022 – May 2023</span>
+                  </div>
+                </div>
+                <p class="role-description">
+                  Built comprehensive web applications and integrated
+                  third-party services.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Projects -->
+      <!-- Enhanced Projects -->
       <section id="projects" class="section fade-in-up delay-long">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-          <!-- Siraty -->
-          <div class="card">
-            <img src="images/siraty.jpg" alt="Siraty preview" />
-            <h3>Siraty</h3>
-            <p>AI-powered CV builder.</p>
-            <a href="https://siraty.net/">Live Demo →</a>
+        <div class="container">
+          <div class="section-header">
+            <h2>Featured Projects</h2>
+            <p class="section-subtitle">Some of my recent work</p>
           </div>
-          <!-- Weblive -->
-          <div class="card">
-            <img src="images/weblive.jpg" alt="Weblive preview" />
-            <h3>Weblive</h3>
-            <p>Real-time streaming platform.</p>
-            <a href="https://github.com/TheCodby/weblive">Source →</a>
-          </div>
-          <!-- Ejarly -->
-          <div class="card">
-            <img
-              src="images/ejarly-platform.jpg"
-              alt="Ejarly platform preview"
-            />
-            <h3>Ejarly Platform</h3>
-            <p>Flutter front, Laravel/FastAPI back.</p>
-            <a href="https://ejarly.net/">Live Demo →</a>
-          </div>
-          <!-- OpenFiles -->
-          <div class="card">
-            <img src="images/openfiles.jpg" alt="OpenFiles preview" />
-            <h3>OpenFiles</h3>
-            <p>Distributed file system.</p>
-            <a href="https://github.com/TheCodby/OpenFiles">Source →</a>
-          </div>
-          <!-- Nest.js PR -->
-          <div class="card">
-            <img src="images/nestjs-pr.jpg" alt="NestJS contribution preview" />
-            <h3>Nest.js PR</h3>
-            <p>Open-source contribution.</p>
-            <a href="https://github.com/nestjs/nest/pull/12161">Source →</a>
-          </div>
-          <!-- Falatha -->
-          <div class="card">
-            <img src="images/falatha.jpg" alt="Falatha preview" />
-            <h3>Falatha</h3>
-            <p>IoT infant monitoring.</p>
-            <a href="#">Details →</a>
-          </div>
-          <!-- Property Finder -->
-          <div class="card">
-            <img
-              src="images/property-finder.jpg"
-              alt="Property Finder preview"
-            />
-            <h3>Property Finder</h3>
-            <p>
-              This app helps clients find properties and brokers market their
-              listings using a Monorepo with Next.js 13, Express.js & Prisma.
-            </p>
-            <a href="https://github.com/TheCodby/property-finder">GitHub →</a>
-          </div>
-          <!-- Ourplaces -->
-          <div class="card">
-            <img src="images/ourplaces.jpg" alt="Ourplaces preview" />
-            <h3>Ourplaces</h3>
-            <p>
-              A social discovery app built with Next.js, Prisma, MongoDB &
-              NextAuth for sharing famous local spots with photos & ratings.
-            </p>
-            <a href="https://github.com/TheCodby/ourplaces">GitHub →</a>
+
+          <div class="projects-grid">
+            <!-- Featured Projects -->
+            <div class="project-card featured">
+              <div class="project-image">
+                <img
+                  src="images/siraty.jpg"
+                  alt="Siraty AI CV Builder"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-content">
+                <h3>Siraty</h3>
+                <p>
+                  AI-powered CV builder with intelligent content suggestions and
+                  modern templates.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">AI/ML</span>
+                  <span class="tech-tag">Node.js</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://siraty.net/"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener"
+                    >Live Demo →</a
+                  >
+                  <a
+                    href="https://github.com/TheCodby/siraty"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener"
+                    >Source →</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card featured">
+              <div class="project-image">
+                <img
+                  src="images/weblive.jpg"
+                  alt="Weblive Streaming Platform"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-content">
+                <h3>Weblive</h3>
+                <p>
+                  Real-time streaming platform with live chat and interactive
+                  features.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">WebRTC</span>
+                  <span class="tech-tag">Socket.IO</span>
+                  <span class="tech-tag">Express</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://weblive.ahmedkotby.com"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener"
+                    >Live Demo →</a
+                  >
+                  <a
+                    href="https://github.com/TheCodby/weblive"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener"
+                    >Source →</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Regular Projects -->
+            <div class="project-card">
+              <div class="project-image">
+                <img
+                  src="images/ejarly-platform.jpg"
+                  alt="Ejarly Platform"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-content">
+                <h3>Ejarly Platform</h3>
+                <p>
+                  Comprehensive business platform built with Flutter frontend
+                  and Laravel/FastAPI backend.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Flutter</span>
+                  <span class="tech-tag">Laravel</span>
+                  <span class="tech-tag">FastAPI</span>
+                </div>
+                <a
+                  href="https://ejarly.net/"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener"
+                  >View Project →</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-image">
+                <img
+                  src="images/property-finder.jpg"
+                  alt="Property Finder"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-content">
+                <h3>Property Finder</h3>
+                <p>
+                  Property discovery app using Next.js 13, Express.js & Prisma
+                  in a Monorepo architecture.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Next.js</span>
+                  <span class="tech-tag">Prisma</span>
+                  <span class="tech-tag">Express</span>
+                </div>
+                <a
+                  href="https://github.com/TheCodby/property-finder"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub →</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-image">
+                <img
+                  src="images/ourplaces.jpg"
+                  alt="Ourplaces Social App"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-content">
+                <h3>Ourplaces</h3>
+                <p>
+                  Social discovery app for sharing local spots with photos,
+                  ratings & NextAuth integration.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Next.js</span>
+                  <span class="tech-tag">MongoDB</span>
+                  <span class="tech-tag">NextAuth</span>
+                </div>
+                <a
+                  href="https://github.com/TheCodby/ourplaces"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub →</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-image">
+                <img
+                  src="images/openfiles.jpg"
+                  alt="OpenFiles System"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-content">
+                <h3>OpenFiles</h3>
+                <p>
+                  Distributed file system with advanced file management and
+                  sharing capabilities.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Distributed Systems</span>
+                  <span class="tech-tag">File Management</span>
+                </div>
+                <a
+                  href="https://github.com/TheCodby/OpenFiles"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub →</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Contact -->
-      <section id="contact" class="section fade-in-up delay-long">
-        <h2>Get In Touch</h2>
-        <p>
-          Email:
-          <a href="mailto:ahmed.m.kotby@gmail.com">ahmed.m.kotby@gmail.com</a>
-        </p>
-        <p>
-          GitHub: <a href="https://github.com/TheCodby">TheCodby</a> • LinkedIn:
-          <a href="https://linkedin.com/in/ahmed-kotby">/in/ahmed-kotby</a>
-        </p>
+      <!-- Enhanced Contact -->
+      <section
+        id="contact"
+        class="section contact-section fade-in-up delay-long"
+      >
+        <div class="container">
+          <div class="section-header">
+            <h2>Let's Work Together</h2>
+            <p class="section-subtitle">Ready to bring your ideas to life</p>
+          </div>
+
+          <div class="contact-content">
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </div>
+                <div class="contact-details">
+                  <h4>Email</h4>
+                  <a href="mailto:ahmed.m.kotby@gmail.com"
+                    >ahmed.m.kotby@gmail.com</a
+                  >
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <img
+                    src="images/github.svg"
+                    alt="GitHub"
+                    width="24"
+                    height="24"
+                    style="color: #ffffff"
+                  />
+                </div>
+                <div class="contact-details">
+                  <h4>GitHub</h4>
+                  <a
+                    href="https://github.com/TheCodby"
+                    target="_blank"
+                    rel="noopener"
+                    >@TheCodby</a
+                  >
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                    />
+                    <rect x="2" y="9" width="4" height="12" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                </div>
+                <div class="contact-details">
+                  <h4>LinkedIn</h4>
+                  <a
+                    href="https://linkedin.com/in/ahmed-kotby"
+                    target="_blank"
+                    rel="noopener"
+                    >ahmed-kotby</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="footer">
-      <p>© 2025 Ahmed Kotby</p>
+      <div class="container">
+        <p>© 2025 Ahmed Kotby</p>
+      </div>
     </footer>
+
+    <!-- Mobile menu script -->
+    <script>
+      // Mobile menu toggle
+      const mobileToggle = document.getElementById("mobile-toggle");
+      const navMenu = document.getElementById("nav-menu");
+
+      mobileToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        mobileToggle.classList.toggle("active");
+      });
+
+      // Close mobile menu when clicking on links
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+          mobileToggle.classList.remove("active");
+        });
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+
+      // Intersection Observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll(".fade-in-up")
+        .forEach((el) => observer.observe(el));
+    </script>
   </body>
 </html>
