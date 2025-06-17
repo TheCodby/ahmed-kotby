@@ -513,6 +513,7 @@ body {
   margin-top: var(--space-2xl);
 }
 
+.skill-category h3,
 .skill-category h4 {
   font-size: 1.1rem;
   font-weight: 600;
@@ -794,6 +795,7 @@ body {
   flex-shrink: 0;
 }
 
+.contact-details h3,
 .contact-details h4 {
   font-size: 1.1rem;
   font-weight: 600;
